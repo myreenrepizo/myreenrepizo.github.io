@@ -2542,27 +2542,15 @@
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
-      <column caption='Rank Label' datatype='string' name='[Calculation_30891931139661831]' role='measure' type='nominal'>
-        <calculation class='tableau' formula='STR([Rank (copy)_30891931138940933]) +&#10;    (&#10;        CASE [Rank (copy)_30891931138940933] % 10&#10;            WHEN 1 THEN &apos;st&apos;&#10;            WHEN 2 THEN &apos;nd&apos;&#10;            WHEN 3 THEN &apos;rd&apos;&#10;            ELSE &apos;th&apos;&#10;        END&#10;    )'>
-          <table-calc ordering-type='Rows' />
-        </calculation>
-      </column>
       <column caption='SalesCalculated' datatype='real' name='[Calculation_4655033217269743616]' role='measure' type='quantitative'>
         <calculation class='tableau' formula='FLOAT(REPLACE([Sales],&apos;$&apos;,&apos;&apos;))' />
       </column>
-      <column caption='Rank' datatype='integer' name='[Calculation_4655033217270972417]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='RANK(SUM([Calculation_4655033217269743616]),&apos;asc&apos;)'>
-          <table-calc ordering-field='[federated.152chjc0pc0zd819zrf4p0uzfcov].[Region]' ordering-type='Field' />
-        </calculation>
+      <column caption='Rank' datatype='real' name='[Calculation_4655033217270972417]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_4655033217269743616])' />
       </column>
       <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column datatype='string' name='[Country/Region]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
       <column aggregation='Sum' datatype='integer' default-format='*00000' name='[Postal Code]' role='dimension' semantic-role='[ZipCode].[Name]' type='ordinal' />
-      <column caption='Rank (Desc)' datatype='integer' name='[Rank (copy)_30891931138940933]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='RANK(SUM([Calculation_4655033217269743616]),&apos;desc&apos;)'>
-          <table-calc ordering-field='[federated.152chjc0pc0zd819zrf4p0uzfcov].[Region]' ordering-type='Field' />
-        </calculation>
-      </column>
       <column datatype='string' name='[Region]' role='dimension' type='nominal' />
       <column datatype='string' name='[State]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
       <_.fcp.ObjectModelTableType.true...column caption='2020W05.csv' datatype='table' name='[__tableau_internal_object_id__].[2020W05.csv_85DF266C7CEC411091F12CB61AD45373]' role='measure' type='quantitative' />
@@ -2578,188 +2566,6 @@
       <layout _.fcp.SchemaViewerObjectModel.false...dim-percentage='0.5' _.fcp.SchemaViewerObjectModel.false...measure-percentage='0.4' dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
       <style>
         <style-rule element='mark'>
-          <encoding attr='color' field='[rank:max:Calculation_4655033217269743616:ok]' type='palette'>
-            <map to='#499894'>
-              <bucket>9</bucket>
-            </map>
-            <map to='#499894'>
-              <bucket>24709</bucket>
-            </map>
-            <map to='#499894'>
-              <bucket>44924</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>8213</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>36427</bucket>
-            </map>
-            <map to='#4e79a7'>
-              <bucket>73259</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>2</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>5</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>15782</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>42350</bucket>
-            </map>
-            <map to='#59a14f'>
-              <bucket>97112</bucket>
-            </map>
-            <map to='#76b7b2'>
-              <bucket>3</bucket>
-            </map>
-            <map to='#79706e'>
-              <bucket>26197</bucket>
-            </map>
-            <map to='#79706e'>
-              <bucket>54115</bucket>
-            </map>
-            <map to='#86bcb6'>
-              <bucket>10</bucket>
-            </map>
-            <map to='#86bcb6'>
-              <bucket>25505</bucket>
-            </map>
-            <map to='#86bcb6'>
-              <bucket>45105</bucket>
-            </map>
-            <map to='#8cd17d'>
-              <bucket>6</bucket>
-            </map>
-            <map to='#8cd17d'>
-              <bucket>20980</bucket>
-            </map>
-            <map to='#8cd17d'>
-              <bucket>43079</bucket>
-            </map>
-            <map to='#8cd17d'>
-              <bucket>107427</bucket>
-            </map>
-            <map to='#9d7660'>
-              <bucket>36002</bucket>
-            </map>
-            <map to='#9d7660'>
-              <bucket>65033</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>13893</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>38907</bucket>
-            </map>
-            <map to='#a0cbe8'>
-              <bucket>76841</bucket>
-            </map>
-            <map to='#b07aa1'>
-              <bucket>1</bucket>
-            </map>
-            <map to='#b07aa1'>
-              <bucket>32115</bucket>
-            </map>
-            <map to='#b07aa1'>
-              <bucket>63358</bucket>
-            </map>
-            <map to='#b6992d'>
-              <bucket>7</bucket>
-            </map>
-            <map to='#b6992d'>
-              <bucket>23188</bucket>
-            </map>
-            <map to='#b6992d'>
-              <bucket>43440</bucket>
-            </map>
-            <map to='#b6992d'>
-              <bucket>116407</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>30321</bucket>
-            </map>
-            <map to='#bab0ac'>
-              <bucket>59539</bucket>
-            </map>
-            <map to='#d37295'>
-              <bucket>30669</bucket>
-            </map>
-            <map to='#d37295'>
-              <bucket>59586</bucket>
-            </map>
-            <map to='#d4a6c8'>
-              <bucket>32882</bucket>
-            </map>
-            <map to='#d4a6c8'>
-              <bucket>64945</bucket>
-            </map>
-            <map to='#d7b5a6'>
-              <bucket>36289</bucket>
-            </map>
-            <map to='#d7b5a6'>
-              <bucket>71596</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>4</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>11</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>25559</bucket>
-            </map>
-            <map to='#e15759'>
-              <bucket>49241</bucket>
-            </map>
-            <map to='#f1ce63'>
-              <bucket>8</bucket>
-            </map>
-            <map to='#f1ce63'>
-              <bucket>24208</bucket>
-            </map>
-            <map to='#f1ce63'>
-              <bucket>44073</bucket>
-            </map>
-            <map to='#f1ce63'>
-              <bucket>137299</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>14782</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>40186</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>80342</bucket>
-            </map>
-            <map to='#fabfd2'>
-              <bucket>31685</bucket>
-            </map>
-            <map to='#fabfd2'>
-              <bucket>62621</bucket>
-            </map>
-            <map to='#ff9d9a'>
-              <bucket>12</bucket>
-            </map>
-            <map to='#ff9d9a'>
-              <bucket>26067</bucket>
-            </map>
-            <map to='#ff9d9a'>
-              <bucket>53917</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>15352</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>41216</bucket>
-            </map>
-            <map to='#ffbe7d'>
-              <bucket>90611</bucket>
-            </map>
-          </encoding>
           <encoding attr='color' field='[rank:sum:Calculation_4655033217269743616:ok]' type='palette'>
             <map to='#499894'>
               <bucket>9</bucket>
@@ -2942,7 +2748,7 @@
               <bucket>90611.0</bucket>
             </map>
           </encoding>
-          <encoding attr='color' field='[rank:sum:Calculation_4655033217269743616:ok:3]' type='palette'>
+          <encoding attr='color' field='[rank:max:Calculation_4655033217269743616:ok]' type='palette'>
             <map to='#499894'>
               <bucket>9</bucket>
             </map>
@@ -2953,9 +2759,6 @@
               <bucket>44924.0</bucket>
             </map>
             <map to='#4e79a7'>
-              <bucket>1</bucket>
-            </map>
-            <map to='#4e79a7'>
               <bucket>8213.0</bucket>
             </map>
             <map to='#4e79a7'>
@@ -2963,6 +2766,9 @@
             </map>
             <map to='#4e79a7'>
               <bucket>73259.0</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>2</bucket>
             </map>
             <map to='#59a14f'>
               <bucket>5</bucket>
@@ -2975,6 +2781,9 @@
             </map>
             <map to='#59a14f'>
               <bucket>97112.0</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>3</bucket>
             </map>
             <map to='#79706e'>
               <bucket>26197.0</bucket>
@@ -3010,9 +2819,6 @@
               <bucket>65033.0</bucket>
             </map>
             <map to='#a0cbe8'>
-              <bucket>2</bucket>
-            </map>
-            <map to='#a0cbe8'>
               <bucket>13893.0</bucket>
             </map>
             <map to='#a0cbe8'>
@@ -3020,6 +2826,9 @@
             </map>
             <map to='#a0cbe8'>
               <bucket>76841.0</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>1</bucket>
             </map>
             <map to='#b07aa1'>
               <bucket>32115.0</bucket>
@@ -3064,6 +2873,9 @@
               <bucket>71596.0</bucket>
             </map>
             <map to='#e15759'>
+              <bucket>4</bucket>
+            </map>
+            <map to='#e15759'>
               <bucket>11</bucket>
             </map>
             <map to='#e15759'>
@@ -3083,9 +2895,6 @@
             </map>
             <map to='#f1ce63'>
               <bucket>137299.0</bucket>
-            </map>
-            <map to='#f28e2b'>
-              <bucket>3</bucket>
             </map>
             <map to='#f28e2b'>
               <bucket>14782.0</bucket>
@@ -3112,7 +2921,186 @@
               <bucket>53917.0</bucket>
             </map>
             <map to='#ffbe7d'>
+              <bucket>15352.0</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>41216.0</bucket>
+            </map>
+            <map to='#ffbe7d'>
+              <bucket>90611.0</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[rank:sum:Calculation_4655033217269743616:ok:3]' type='palette'>
+            <map to='#499894'>
+              <bucket>9</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>24709.0</bucket>
+            </map>
+            <map to='#499894'>
+              <bucket>44924.0</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>8213.0</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>36427.0</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>73259.0</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>2</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>5</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>15782.0</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>42350.0</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>97112.0</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>3</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>26197.0</bucket>
+            </map>
+            <map to='#79706e'>
+              <bucket>54115.0</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>10</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>25505.0</bucket>
+            </map>
+            <map to='#86bcb6'>
+              <bucket>45105.0</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>6</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>20980.0</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>43079.0</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>107427.0</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>36002.0</bucket>
+            </map>
+            <map to='#9d7660'>
+              <bucket>65033.0</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>13893.0</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>38907.0</bucket>
+            </map>
+            <map to='#a0cbe8'>
+              <bucket>76841.0</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>1</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>32115.0</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>63358.0</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>7</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>23188.0</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>43440.0</bucket>
+            </map>
+            <map to='#b6992d'>
+              <bucket>116407.0</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>30321.0</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>59539.0</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>30669.0</bucket>
+            </map>
+            <map to='#d37295'>
+              <bucket>59586.0</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>32882.0</bucket>
+            </map>
+            <map to='#d4a6c8'>
+              <bucket>64945.0</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>36289.0</bucket>
+            </map>
+            <map to='#d7b5a6'>
+              <bucket>71596.0</bucket>
+            </map>
+            <map to='#e15759'>
               <bucket>4</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>11</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>25559.0</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>49241.0</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>8</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>24208.0</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>44073.0</bucket>
+            </map>
+            <map to='#f1ce63'>
+              <bucket>137299.0</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>14782.0</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>40186.0</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>80342.0</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>31685.0</bucket>
+            </map>
+            <map to='#fabfd2'>
+              <bucket>62621.0</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>12</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>26067.0</bucket>
+            </map>
+            <map to='#ff9d9a'>
+              <bucket>53917.0</bucket>
             </map>
             <map to='#ffbe7d'>
               <bucket>15352.0</bucket>
@@ -4693,89 +4681,46 @@
             <datasource caption='2020W05' name='federated.152chjc0pc0zd819zrf4p0uzfcov' />
           </datasources>
           <datasource-dependencies datasource='federated.152chjc0pc0zd819zrf4p0uzfcov'>
-            <column caption='Rank Label' datatype='string' name='[Calculation_30891931139661831]' role='measure' type='nominal'>
-              <calculation class='tableau' formula='STR([Rank (copy)_30891931138940933]) +&#10;    (&#10;        CASE [Rank (copy)_30891931138940933] % 10&#10;            WHEN 1 THEN &apos;st&apos;&#10;            WHEN 2 THEN &apos;nd&apos;&#10;            WHEN 3 THEN &apos;rd&apos;&#10;            ELSE &apos;th&apos;&#10;        END&#10;    )'>
-                <table-calc ordering-type='Rows' />
-              </calculation>
-            </column>
             <column caption='SalesCalculated' datatype='real' name='[Calculation_4655033217269743616]' role='measure' type='quantitative'>
               <calculation class='tableau' formula='FLOAT(REPLACE([Sales],&apos;$&apos;,&apos;&apos;))' />
             </column>
-            <column caption='Rank' datatype='integer' name='[Calculation_4655033217270972417]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='RANK(SUM([Calculation_4655033217269743616]),&apos;asc&apos;)'>
-                <table-calc ordering-field='[federated.152chjc0pc0zd819zrf4p0uzfcov].[Region]' ordering-type='Field' />
-              </calculation>
-            </column>
             <column datatype='date' name='[Order Date]' role='dimension' type='ordinal' />
-            <column caption='Rank (Desc)' datatype='integer' name='[Rank (copy)_30891931138940933]' role='measure' type='quantitative'>
-              <calculation class='tableau' formula='RANK(SUM([Calculation_4655033217269743616]),&apos;desc&apos;)'>
-                <table-calc ordering-field='[federated.152chjc0pc0zd819zrf4p0uzfcov].[Region]' ordering-type='Field' />
-              </calculation>
-            </column>
             <column datatype='string' name='[Region]' role='dimension' type='nominal' />
             <column datatype='string' name='[Sales]' role='dimension' type='nominal' />
             <column-instance column='[Order Date]' derivation='Month' name='[mn:Order Date:ok]' pivot='key' type='ordinal' />
             <column-instance column='[Region]' derivation='None' name='[none:Region:nk]' pivot='key' type='nominal' />
-            <column-instance column='[Calculation_30891931139661831]' derivation='User' name='[usr:Calculation_30891931139661831:nk]' pivot='key' type='nominal'>
-              <table-calc ordering-type='Rows' />
-              <table-calc field='[federated.152chjc0pc0zd819zrf4p0uzfcov].[Rank (copy)_30891931138940933]' ordering-field='[federated.152chjc0pc0zd819zrf4p0uzfcov].[Region]' ordering-type='Field' />
-            </column-instance>
-            <column-instance column='[Calculation_4655033217270972417]' derivation='User' name='[usr:Calculation_4655033217270972417:qk:1]' pivot='key' type='quantitative'>
-              <table-calc ordering-field='[federated.152chjc0pc0zd819zrf4p0uzfcov].[Region]' ordering-type='Field' />
+            <column-instance column='[Calculation_4655033217269743616]' derivation='Sum' name='[rank:sum:Calculation_4655033217269743616:qk:4]' pivot='key' type='quantitative'>
+              <table-calc ordering-field='[federated.152chjc0pc0zd819zrf4p0uzfcov].[Region]' ordering-type='Field' rank-options='Competition,Ascending' type='Rank' />
             </column-instance>
           </datasource-dependencies>
           <aggregation value='true' />
         </view>
         <style>
           <style-rule element='axis'>
-            <encoding attr='space' class='1' field='[federated.152chjc0pc0zd819zrf4p0uzfcov].[usr:Calculation_4655033217270972417:qk:1]' field-type='quantitative' fold='true' scope='rows' synchronized='true' type='space' />
-            <format attr='display' class='0' field='[federated.152chjc0pc0zd819zrf4p0uzfcov].[usr:Calculation_4655033217270972417:qk:1]' scope='rows' value='false' />
-            <format attr='display' class='1' field='[federated.152chjc0pc0zd819zrf4p0uzfcov].[usr:Calculation_4655033217270972417:qk:1]' scope='rows' value='false' />
+            <encoding attr='space' class='1' field='[federated.152chjc0pc0zd819zrf4p0uzfcov].[rank:sum:Calculation_4655033217269743616:qk:4]' field-type='quantitative' fold='true' scope='rows' type='space' />
             <format attr='border-color' value='#b0b0b0' />
             <format attr='border-width' value='1' />
-            <format attr='stroke-size' value='0' />
-            <format attr='tick-color' value='#00000000' />
           </style-rule>
           <style-rule element='cell'>
             <format attr='border-color' value='#ffffff' />
             <format attr='border-width' value='0' />
             <format attr='border-style' value='none' />
           </style-rule>
-          <style-rule element='header'>
-            <format attr='border-width' data-class='total' value='0' />
-            <format attr='border-style' data-class='total' value='none' />
+          <style-rule element='mark'>
+            <encoding attr='size-bar' field='[federated.152chjc0pc0zd819zrf4p0uzfcov].[rank:sum:Calculation_4655033217269743616:qk:4]' field-type='quantitative' max-size='1' min-size='0.005' type='centersize' />
           </style-rule>
           <style-rule element='pane'>
             <format attr='border-width' data-class='total' value='0' />
             <format attr='border-style' data-class='total' value='none' />
           </style-rule>
-          <style-rule element='worksheet'>
-            <format attr='display-field-labels' scope='cols' value='false' />
-          </style-rule>
-          <style-rule element='dropline'>
-            <format attr='stroke-size' value='0' />
-            <format attr='line-visibility' value='off' />
-          </style-rule>
-          <style-rule element='refline'>
-            <format attr='stroke-size' value='0' />
-            <format attr='line-visibility' value='off' />
-          </style-rule>
-          <style-rule element='gridline'>
-            <format attr='stroke-size' scope='rows' value='0' />
-            <format attr='line-visibility' scope='rows' value='off' />
-          </style-rule>
-          <style-rule element='zeroline'>
-            <format attr='stroke-size' value='0' />
-            <format attr='line-visibility' value='off' />
-          </style-rule>
           <style-rule element='table-div'>
+            <format attr='div-level' scope='rows' value='1' />
             <format attr='stroke-size' scope='rows' value='0' />
             <format attr='line-visibility' scope='rows' value='off' />
             <format attr='stroke-color' scope='cols' value='#ffffff' />
             <format attr='div-level' scope='cols' value='0' />
             <format attr='stroke-size' scope='cols' value='0' />
             <format attr='line-visibility' scope='cols' value='off' />
-            <format attr='div-level' scope='rows' value='0' />
           </style-rule>
         </style>
         <panes>
@@ -4788,13 +4733,6 @@
             <encodings>
               <color column='[federated.152chjc0pc0zd819zrf4p0uzfcov].[none:Region:nk]' />
             </encodings>
-            <customized-tooltip>
-              <formatted-text>
-                <run bold='true' fontsize='12'><![CDATA[<[federated.152chjc0pc0zd819zrf4p0uzfcov].[mn:Order Date:ok]>,  <[federated.152chjc0pc0zd819zrf4p0uzfcov].[usr:Calculation_30891931139661831:nk]> Place]]></run>
-                <run>Æ&#10;&#10;</run>
-                <run bold='true' fontsize='15'><![CDATA[<[federated.152chjc0pc0zd819zrf4p0uzfcov].[none:Region:nk]> Region]]></run>
-              </formatted-text>
-            </customized-tooltip>
             <style>
               <style-rule element='cell'>
                 <format attr='text-align' value='center' />
@@ -4821,7 +4759,7 @@
               </style-rule>
             </style>
           </pane>
-          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.152chjc0pc0zd819zrf4p0uzfcov].[usr:Calculation_4655033217270972417:qk:1]'>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.152chjc0pc0zd819zrf4p0uzfcov].[rank:sum:Calculation_4655033217269743616:qk:4]'>
             <view>
               <breakdown value='auto' />
             </view>
@@ -4829,47 +4767,32 @@
             <mark-sizing mark-sizing-setting='marks-scaling-off' />
             <encodings>
               <color column='[federated.152chjc0pc0zd819zrf4p0uzfcov].[none:Region:nk]' />
-              <text column='[federated.152chjc0pc0zd819zrf4p0uzfcov].[none:Region:nk]' />
             </encodings>
-            <customized-tooltip>
-              <formatted-text>
-                <run bold='true' fontsize='12'><![CDATA[<[federated.152chjc0pc0zd819zrf4p0uzfcov].[mn:Order Date:ok]>,  <[federated.152chjc0pc0zd819zrf4p0uzfcov].[usr:Calculation_30891931139661831:nk]> Place]]></run>
-                <run>Æ&#10;&#10;</run>
-                <run bold='true' fontsize='15'><![CDATA[<[federated.152chjc0pc0zd819zrf4p0uzfcov].[none:Region:nk]> Region]]></run>
-              </formatted-text>
-            </customized-tooltip>
             <style>
               <style-rule element='cell'>
                 <format attr='text-align' value='center' />
-                <format attr='vertical-align' value='center' />
               </style-rule>
               <style-rule element='datalabel'>
                 <format attr='color-mode' value='user' />
                 <format attr='color' value='#ffffff' />
-                <format attr='font-size' value='12' />
-                <format attr='font-weight' value='bold' />
               </style-rule>
               <style-rule element='mark'>
                 <format attr='mark-labels-line-first' value='true' />
                 <format attr='mark-labels-line-last' value='true' />
-                <format attr='size' value='2.4198894500732422' />
-                <format attr='mark-labels-cull' value='false' />
-                <format attr='mark-labels-mode' value='range' />
-                <format attr='mark-labels-range-scope' value='table' />
-                <format attr='mark-labels-range-field' value='[federated.152chjc0pc0zd819zrf4p0uzfcov].[mn:Order Date:ok]' />
-                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-range-min' value='true' />
                 <format attr='mark-labels-range-max' value='true' />
-                <format attr='mark-labels-range-min' value='false' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
+                <format attr='size' value='2' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='false' />
                 <format attr='has-stroke' value='false' />
                 <format attr='mark-transparency' value='152' />
               </style-rule>
-              <style-rule element='trendline'>
-                <format attr='stroke-size' value='0' />
-                <format attr='line-visibility' value='off' />
-              </style-rule>
             </style>
           </pane>
-          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.152chjc0pc0zd819zrf4p0uzfcov].[usr:Calculation_4655033217270972417:qk:1]' y-index='1'>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.152chjc0pc0zd819zrf4p0uzfcov].[rank:sum:Calculation_4655033217269743616:qk:4]' y-index='1'>
             <view>
               <breakdown value='auto' />
             </view>
@@ -4877,43 +4800,32 @@
             <mark-sizing mark-sizing-setting='marks-scaling-off' />
             <encodings>
               <color column='[federated.152chjc0pc0zd819zrf4p0uzfcov].[none:Region:nk]' />
-              <text column='[federated.152chjc0pc0zd819zrf4p0uzfcov].[usr:Calculation_30891931139661831:nk]' />
             </encodings>
-            <customized-tooltip>
-              <formatted-text>
-                <run bold='true' fontsize='12'><![CDATA[<[federated.152chjc0pc0zd819zrf4p0uzfcov].[mn:Order Date:ok]>,  <[federated.152chjc0pc0zd819zrf4p0uzfcov].[usr:Calculation_30891931139661831:nk]> Place]]></run>
-                <run>Æ&#10;&#10;</run>
-                <run bold='true' fontsize='15'><![CDATA[<[federated.152chjc0pc0zd819zrf4p0uzfcov].[none:Region:nk]> Region]]></run>
-              </formatted-text>
-            </customized-tooltip>
             <style>
               <style-rule element='cell'>
                 <format attr='text-align' value='center' />
-                <format attr='vertical-align' value='center' />
               </style-rule>
               <style-rule element='datalabel'>
                 <format attr='color-mode' value='user' />
                 <format attr='color' value='#ffffff' />
-                <format attr='font-size' value='12' />
-                <format attr='font-weight' value='bold' />
               </style-rule>
               <style-rule element='mark'>
+                <format attr='mark-labels-line-first' value='true' />
+                <format attr='mark-labels-line-last' value='true' />
                 <format attr='mark-labels-range-min' value='true' />
                 <format attr='mark-labels-range-max' value='true' />
+                <format attr='mark-labels-range-scope' value='pane' />
+                <format attr='mark-labels-range-field' value='' />
                 <format attr='size' value='1.8570718765258789' />
-                <format attr='mark-labels-cull' value='false' />
-                <format attr='mark-labels-range-field' value='[federated.152chjc0pc0zd819zrf4p0uzfcov].[mn:Order Date:ok]' />
-                <format attr='mark-labels-range-scope' value='table' />
-                <format attr='mark-labels-mode' value='line-ends' />
-                <format attr='mark-labels-line-last' value='false' />
-                <format attr='mark-labels-line-first' value='true' />
-                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='false' />
                 <format attr='has-stroke' value='false' />
               </style-rule>
             </style>
           </pane>
         </panes>
-        <rows>([federated.152chjc0pc0zd819zrf4p0uzfcov].[usr:Calculation_4655033217270972417:qk:1] + [federated.152chjc0pc0zd819zrf4p0uzfcov].[usr:Calculation_4655033217270972417:qk:1])</rows>
+        <rows>([federated.152chjc0pc0zd819zrf4p0uzfcov].[rank:sum:Calculation_4655033217269743616:qk:4] + [federated.152chjc0pc0zd819zrf4p0uzfcov].[rank:sum:Calculation_4655033217269743616:qk:4])</rows>
         <cols>[federated.152chjc0pc0zd819zrf4p0uzfcov].[mn:Order Date:ok]</cols>
       </table>
       <simple-id uuid='{54695551-C799-494F-B26F-4B333C784C61}' />
@@ -4987,8 +4899,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='35' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='34' param='vert' w='84000' x='8000' y='8000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='33' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='32' param='vert' w='98400' x='800' y='1000'>
                 <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' forceUpdate='true' h='3125' id='9' w='98400' x='800' y='1000'>
                   <formatted-text>
                     <run>FUNCTION: CHART IS SORTED ACCORDING TO CHOSEN HEADER</run>
@@ -5012,7 +4924,7 @@
                   </zone-style>
                 </zone>
                 <zone fixed-size='280' h='43625' id='5' is-fixed='true' name='W01 Body' show-title='false' w='98400' x='800' y='14000'>
-                  <layout-cache fixed-size-h='341' minwidth='381' type-h='fixed' type-w='scalable' />
+                  <layout-cache minwidth='381' type-h='fixed' type-w='scalable' />
                   <zone-style>
                     <format attr='border-color' value='#000000' />
                     <format attr='border-style' value='none' />
@@ -5139,8 +5051,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='37' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='36' param='vert' w='84000' x='8000' y='8000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='35' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='34' param='vert' w='98400' x='800' y='1000'>
                 <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='3125' id='16' w='98400' x='800' y='1000'>
                   <formatted-text>
                     <run>FUNCTION: BAR CHART CHANGES ACCORDING TO CHOSEN VALUE AND DATE RANGE</run>
@@ -5303,8 +5215,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='750' minheight='750' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='30' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='29' param='vert' w='84000' x='8000' y='8000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='28' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='27' param='vert' w='98400' x='800' y='1000'>
                 <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='3125' id='13' w='98400' x='800' y='1000'>
                   <formatted-text>
                     <run>FUNCTION: CHANGE DATE  GROUPING OF DATA BASED ON CHOSEN DATE TYPE</run>
@@ -5521,8 +5433,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='850' minheight='850' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='36' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='35' param='vert' w='84000' x='8000' y='8000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='34' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='33' param='vert' w='98400' x='800' y='1000'>
                 <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' fixed-size='24' h='4000' id='24' w='98400' x='800' y='1000'>
                   <formatted-text>
                     <run>FUNCTION: Display KPI and Chart based on selected Date Range</run>
@@ -5637,42 +5549,26 @@
       <size maxheight='800' maxwidth='1000' minheight='800' minwidth='1000' />
       <zones>
         <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='4' w='100000' x='0' y='0'>
-          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='8' param='vert' w='98400' x='800' y='1000'>
-            <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='3125' id='11' w='98400' x='800' y='1000'>
-              <formatted-text>
-                <run>FUNCTION: Shows competitive ranks of regions per month </run>
-              </formatted-text>
-              <zone-style>
-                <format attr='border-color' value='#000000' />
-                <format attr='border-style' value='none' />
-                <format attr='border-width' value='0' />
-                <format attr='margin' value='4' />
-              </zone-style>
+          <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='7' param='horz' w='98400' x='800' y='1000'>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='98000' id='5' w='82400' x='800' y='1000'>
+              <zone h='98000' id='3' name='W05 Chart' w='82400' x='800' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
             </zone>
-            <zone _.fcp.SetMembershipControl.false...type='empty' _.fcp.SetMembershipControl.true...type-v2='empty' fixed-size='131' h='17375' id='10' is-fixed='true' w='98400' x='800' y='4125'>
-              <zone-style>
-                <format attr='border-color' value='#000000' />
-                <format attr='border-style' value='none' />
-                <format attr='border-width' value='0' />
-                <format attr='margin' value='4' />
-              </zone-style>
-            </zone>
-            <zone h='53500' id='3' name='W05 Chart' show-title='false' w='98400' x='800' y='21500'>
-              <layout-cache minheight='121' type-h='scalable' type-w='fixed' />
-              <zone-style>
-                <format attr='border-color' value='#000000' />
-                <format attr='border-style' value='none' />
-                <format attr='border-width' value='0' />
-                <format attr='margin' value='4' />
-              </zone-style>
-            </zone>
-            <zone _.fcp.SetMembershipControl.false...type='empty' _.fcp.SetMembershipControl.true...type-v2='empty' fixed-size='184' h='24000' id='9' is-fixed='true' w='98400' x='800' y='75000'>
-              <zone-style>
-                <format attr='border-color' value='#000000' />
-                <format attr='border-style' value='none' />
-                <format attr='border-width' value='0' />
-                <format attr='margin' value='4' />
-              </zone-style>
+            <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' fixed-size='160' h='98000' id='6' is-fixed='true' param='vert' w='16000' x='83200' y='1000'>
+              <zone _.fcp.SetMembershipControl.false...type='color' _.fcp.SetMembershipControl.true...type-v2='color' h='13250' id='8' name='W05 Chart' pane-specification-id='1' param='[federated.152chjc0pc0zd819zrf4p0uzfcov].[none:Region:nk]' w='16000' x='83200' y='1000'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
             </zone>
           </zone>
           <zone-style>
@@ -5687,31 +5583,8 @@
         <devicelayout auto-generated='true' name='Phone'>
           <size maxheight='700' minheight='700' sizing-mode='vscroll' />
           <zones>
-            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='13' w='100000' x='0' y='0'>
-              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='98000' id='12' param='vert' w='98400' x='800' y='1000'>
-                <zone _.fcp.SetMembershipControl.false...type='text' _.fcp.SetMembershipControl.true...type-v2='text' h='3125' id='11' w='98400' x='800' y='1000'>
-                  <formatted-text>
-                    <run>FUNCTION: Shows competitive ranks of regions per month </run>
-                  </formatted-text>
-                  <zone-style>
-                    <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
-                    <format attr='margin' value='4' />
-                    <format attr='padding' value='0' />
-                  </zone-style>
-                </zone>
-                <zone fixed-size='280' h='53500' id='3' is-fixed='true' name='W05 Chart' show-title='false' w='98400' x='800' y='21500'>
-                  <layout-cache minheight='121' type-h='scalable' type-w='fixed' />
-                  <zone-style>
-                    <format attr='border-color' value='#000000' />
-                    <format attr='border-style' value='none' />
-                    <format attr='border-width' value='0' />
-                    <format attr='margin' value='4' />
-                    <format attr='padding' value='0' />
-                  </zone-style>
-                </zone>
-              </zone>
+            <zone _.fcp.SetMembershipControl.false...type='layout-basic' _.fcp.SetMembershipControl.true...type-v2='layout-basic' h='100000' id='2' w='100000' x='0' y='0'>
+              <zone _.fcp.SetMembershipControl.false...type='layout-flow' _.fcp.SetMembershipControl.true...type-v2='layout-flow' h='84000' id='1' param='vert' w='84000' x='8000' y='8000' />
               <zone-style>
                 <format attr='border-color' value='#000000' />
                 <format attr='border-style' value='none' />
@@ -5745,7 +5618,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='8' />
       <simple-id uuid='{69F0A832-2C23-40EB-B7F8-6EC770DC6F21}' />
     </window>
     <window class='dashboard' name='W03'>
@@ -5757,7 +5630,7 @@
           <zoom type='entire-view' />
         </viewpoint>
       </viewpoints>
-      <active id='-1' />
+      <active id='9' />
       <simple-id uuid='{A8301C3D-6AFA-4930-BA78-7491868FE090}' />
     </window>
     <window class='dashboard' name='W04'>
@@ -5781,7 +5654,7 @@
       <active id='-1' />
       <simple-id uuid='{BEE54391-7376-423A-9962-03E58DA3B651}' />
     </window>
-    <window class='dashboard' maximized='true' name='W05'>
+    <window class='dashboard' name='W05'>
       <viewpoints>
         <viewpoint name='W05 Chart'>
           <zoom type='entire-view' />
@@ -5789,6 +5662,34 @@
       </viewpoints>
       <active id='-1' />
       <simple-id uuid='{56E70206-AD5C-4E76-80AF-1F7118473E1D}' />
+    </window>
+    <window class='worksheet' maximized='true' name='W05 Chart'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.152chjc0pc0zd819zrf4p0uzfcov].[none:Region:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{638D863F-FF57-48B3-8E15-AA0FB9B78F89}' />
     </window>
     <window class='worksheet' hidden='true' name='W01 Body'>
       <cards>
@@ -6095,221 +5996,5 @@
       </cards>
       <simple-id uuid='{80DCEC5C-41D7-4CD4-AB76-478812681DBE}' />
     </window>
-    <window class='worksheet' hidden='true' name='W05 Chart'>
-      <cards>
-        <edge name='left'>
-          <strip size='160'>
-            <card type='pages' />
-            <card type='filters' />
-            <card type='marks' />
-          </strip>
-        </edge>
-        <edge name='top'>
-          <strip size='2147483647'>
-            <card type='columns' />
-          </strip>
-          <strip size='2147483647'>
-            <card type='rows' />
-          </strip>
-          <strip size='31'>
-            <card type='title' />
-          </strip>
-        </edge>
-        <edge name='right'>
-          <strip size='160'>
-            <card pane-specification-id='1' param='[federated.152chjc0pc0zd819zrf4p0uzfcov].[none:Region:nk]' type='color' />
-          </strip>
-        </edge>
-      </cards>
-      <viewpoint>
-        <highlight>
-          <color-one-way>
-            <field>[federated.152chjc0pc0zd819zrf4p0uzfcov].[none:Region:nk]</field>
-            <field>[federated.152chjc0pc0zd819zrf4p0uzfcov].[usr:Calculation_30891931139661831:nk]</field>
-          </color-one-way>
-        </highlight>
-      </viewpoint>
-      <simple-id uuid='{638D863F-FF57-48B3-8E15-AA0FB9B78F89}' />
-    </window>
   </windows>
-  <thumbnails>
-    <thumbnail height='192' name='W05' width='192'>
-      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
-      dGIbqgUAAAAASUVORK5CYII=
-    </thumbnail>
-  </thumbnails>
 </workbook>
