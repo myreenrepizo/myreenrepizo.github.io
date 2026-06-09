@@ -1,0 +1,381 @@
+---
+layout: default
+title: "Myreen Repizo | Information Security Consultant | CISSP · CISM · CISA"
+description: "Information security consultant specializing in SOC 2, ISO 27001, GRC, and compliance automation. CISSP, CISM, CISA certified. Law graduate. Based in the Philippines."
+---
+
+<style>
+  /* ── Reset & base ── */
+  .home-wrapper {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    color: #1a1a2e;
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    padding: 4rem 0 3rem;
+    border-bottom: 2px solid #e8ecf0;
+  }
+  .hero-eyebrow {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 1rem;
+  }
+  .hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0 0 1.25rem;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+  }
+  .hero h1 span {
+    color: #2563eb;
+  }
+  .hero-sub {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #475569;
+    max-width: 640px;
+    margin-bottom: 2rem;
+  }
+  .hero-cta-row {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .btn-primary {
+    display: inline-block;
+    background: #2563eb;
+    color: #fff !important;
+    text-decoration: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 0.01em;
+    transition: background 0.2s;
+  }
+  .btn-primary:hover { background: #1d4ed8; }
+  .btn-secondary {
+    display: inline-block;
+    color: #2563eb !important;
+    text-decoration: none;
+    padding: 0.75rem 1.75rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    border: 2px solid #2563eb;
+    transition: background 0.2s, color 0.2s;
+  }
+  .btn-secondary:hover { background: #eff6ff; }
+
+  /* ── Differentiator bar ── */
+  .diff-bar {
+    display: flex;
+    gap: 0;
+    margin: 2.5rem 0;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-wrap: wrap;
+  }
+  .diff-item {
+    flex: 1 1 180px;
+    padding: 1.25rem 1.5rem;
+    border-right: 1px solid #e2e8f0;
+  }
+  .diff-item:last-child { border-right: none; }
+  .diff-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #94a3b8;
+    margin-bottom: 0.35rem;
+  }
+  .diff-value {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #0f172a;
+  }
+
+  /* ── Section headings ── */
+  .section {
+    padding: 3rem 0;
+    border-bottom: 1px solid #e8ecf0;
+  }
+  .section:last-child { border-bottom: none; }
+  .section-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #2563eb;
+    margin-bottom: 0.5rem;
+  }
+  .section h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.01em;
+  }
+  .section-intro {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.7;
+    max-width: 600px;
+    margin-bottom: 2rem;
+  }
+
+  /* ── Services grid ── */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1.25rem;
+  }
+  .service-card {
+    padding: 1.5rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    transition: border-color 0.2s, box-shadow 0.2s;
+  }
+  .service-card:hover {
+    border-color: #2563eb;
+    box-shadow: 0 4px 16px rgba(37,99,235,0.08);
+  }
+  .service-icon {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+  .service-card h3 {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.5rem;
+  }
+  .service-card p {
+    font-size: 0.875rem;
+    color: #64748b;
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  /* ── Credentials ── */
+  .credentials-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  /* ── Why me section ── */
+  .why-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.25rem;
+  }
+  .why-list li {
+    padding: 1.25rem 1.5rem;
+    background: #f8fafc;
+    border-left: 3px solid #2563eb;
+    border-radius: 0 6px 6px 0;
+  }
+  .why-list li strong {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin-bottom: 0.4rem;
+  }
+  .why-list li span {
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.6;
+  }
+
+  /* ── CTA band ── */
+  .cta-band {
+    background: #0f172a;
+    color: #fff;
+    border-radius: 10px;
+    padding: 2.5rem 2rem;
+    text-align: center;
+    margin: 3rem 0;
+  }
+  .cta-band h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 0.75rem;
+    letter-spacing: -0.01em;
+  }
+  .cta-band p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+    margin: 0 0 1.5rem;
+  }
+  .btn-white {
+    display: inline-block;
+    background: #fff;
+    color: #0f172a !important;
+    text-decoration: none;
+    padding: 0.75rem 2rem;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+  }
+  .btn-white:hover { background: #e2e8f0; }
+
+  @media (max-width: 600px) {
+    .hero { padding: 2.5rem 0 2rem; }
+    .diff-bar { flex-direction: column; }
+    .diff-item { border-right: none; border-bottom: 1px solid #e2e8f0; }
+    .diff-item:last-child { border-bottom: none; }
+  }
+</style>
+
+<div class="home-wrapper">
+
+  <!-- ── HERO ── -->
+  <section class="hero">
+    <p class="hero-eyebrow">Information Security Consultant · Philippines &amp; Remote</p>
+    <h1>Security expertise.<br><span>Legal precision.</span><br>Audit-ready results.</h1>
+    <p class="hero-sub">
+      I help organizations build and maintain compliance programs that hold up under scrutiny:
+      SOC 2, ISO 27001, GRC, and beyond. CISSP · CISM · CISA certified, with a legal background
+      that brings contractual rigor and regulatory clarity to every engagement.
+    </p>
+    <div class="hero-cta-row">
+      <a href="/portfolio" class="btn-primary">View my work</a>
+      <a href="/contact" class="btn-secondary">Work with me</a>
+    </div>
+  </section>
+
+  <!-- ── DIFFERENTIATORS ── -->
+  <div class="diff-bar">
+    <div class="diff-item">
+      <div class="diff-label">Certifications</div>
+      <div class="diff-value">CISSP · CISM · CISA · ISO 27001</div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-label">Background</div>
+      <div class="diff-value">Security + Data Analytics + Law</div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-label">Frameworks</div>
+      <div class="diff-value">SOC 2 · ISO 27001 · NIST · PCI-DSS</div>
+    </div>
+    <div class="diff-item">
+      <div class="diff-label">Availability</div>
+      <div class="diff-value">Remote · Fractional · Project-based</div>
+    </div>
+  </div>
+
+  <!-- ── SERVICES ── -->
+  <section class="section">
+    <p class="section-eyebrow">What I do</p>
+    <h2>Services</h2>
+    <p class="section-intro">
+      From readiness assessments to full program builds, I work with companies that need compliance
+      done right, not just checkbox-ticked.
+    </p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🛡️</div>
+        <h3>SOC 2 Readiness &amp; Audit Support</h3>
+        <p>Gap assessments, control design, evidence preparation, and auditor liaison for Type I and Type II engagements.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <h3>ISO 27001 Implementation</h3>
+        <p>End-to-end ISMS design, risk treatment, policy development, and readiness for certification audits.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">⚖️</div>
+        <h3>GRC Program Development</h3>
+        <p>Governance frameworks, risk registers, compliance calendars, and third-party risk programs built to scale.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <h3>Compliance Automation</h3>
+        <p>Tooling and templates that reduce manual compliance overhead: evidence collection, control tracking, and reporting.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🏛️</div>
+        <h3>vCISO Advisory</h3>
+        <p>Fractional security leadership for companies that need strategic oversight without a full-time hire.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🔏</div>
+        <h3>Privacy &amp; Data Governance</h3>
+        <p>Data Privacy Act compliance, GDPR alignment, and privacy-by-design programs informed by legal training.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WHY ME ── -->
+  <section class="section">
+    <p class="section-eyebrow">Why clients choose me</p>
+    <h2>The difference</h2>
+    <ul class="why-list">
+      <li>
+        <strong>Security + Legal in one person</strong>
+        <span>A law background means I read contracts, regulations, and audit reports the same way your legal team does, and translate them into actionable security controls.</span>
+      </li>
+      <li>
+        <strong>Multi-framework fluency</strong>
+        <span>Hands-on across SOC 2, ISO 27001, NIST CSF, PCI-DSS, HIPAA, and SOX ITGC. Controls are mapped once and applied across frameworks, eliminating redundant work.</span>
+      </li>
+      <li>
+        <strong>Analytically driven</strong>
+        <span>A data analytics background means risk assessments are quantified, not just qualitative. Decisions are backed by evidence, not intuition.</span>
+      </li>
+      <li>
+        <strong>Built for regulated industries</strong>
+        <span>Financial services, healthcare, SaaS, and public sector organizations face the highest compliance pressure. That's where I focus.</span>
+      </li>
+      <li>
+        <strong>AI as a force multiplier</strong>
+        <span>I use AI tools to accelerate research, documentation, and analysis without sacrificing quality or judgment. Clients get faster turnaround and more consistent deliverables.</span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ── CREDENTIALS ── -->
+  <section class="section">
+    <p class="section-eyebrow">Verified credentials</p>
+    <h2>Certifications</h2>
+    <p class="section-intro">All certifications are active and verifiable via Credly.</p>
+    <div class="credentials-row">
+      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="1ba28946-b41e-4d8d-b25f-263dfeb23afb" data-share-badge-host="https://www.credly.com"></div>
+      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="7c9634f3-31d5-42be-8ef8-e68b417ddc03" data-share-badge-host="https://www.credly.com"></div>
+      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="2a001a29-2b08-456e-93d9-bd5aaadf730c" data-share-badge-host="https://www.credly.com"></div>
+      <div data-iframe-width="150" data-iframe-height="270" data-share-badge-id="5db3ed20-9bcf-44dd-8e5c-27475832f0a9" data-share-badge-host="https://www.credly.com"></div>
+    </div>
+  </section>
+
+  <!-- ── CTA BAND ── -->
+  <div class="cta-band">
+    <h2>Ready to make your compliance program airtight?</h2>
+    <p>Let's talk about your SOC 2, ISO 27001, or GRC needs.</p>
+    <a href="/contact" class="btn-white">Get in touch</a>
+  </div>
+
+</div>
+
+<!-- Credly embed script, loaded once at the bottom -->
+<script type="text/javascript" async src="//cdn.credly.com/assets/utilities/embed.js"></script>
