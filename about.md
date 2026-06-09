@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "About | Myreen Repizo: Information Security Consultant"
-description: "About Myreen Repizo: CISSP, CISM, CISA certified information security consultant, data analytics professional, and law graduate based in the Philippines."
+description: "About Myreen Repizo: CISSP, CISM, CISA certified information security consultant and data analytics professional based in the Philippines."
 permalink: /about/
 ---
 
@@ -146,34 +146,29 @@ permalink: /about/
 
   <div class="about-hero">
     <p class="about-eyebrow">About</p>
-    <h1>Security depth.<br>Legal clarity.<br>Practical outcomes.</h1>
+    <h1>Security depth.<br>Analytical rigor.<br>Practical outcomes.</h1>
     <p>
       I'm Myreen Repizo, an information security consultant with certifications in CISSP, CISM, CISA,
-      and ISO 27001, a background in data analytics, and a law degree. I work with organizations that
+      and ISO 27001, and a background in data analytics. I work with organizations that
       operate in regulated industries and need compliance programs that are both technically sound and
-      legally defensible.
+      built to withstand scrutiny.
     </p>
   </div>
 
   <div class="about-section">
     <h2>Background</h2>
     <p>
-      My career has moved deliberately across three disciplines that rarely converge in one person:
-      information security, data analytics, and law. That combination is not accidental; it reflects
+      My career has moved deliberately across two disciplines that rarely converge in one person:
+      information security and data analytics. That combination is not accidental; it reflects
       a belief that the strongest compliance and risk programs are built at the intersection of
-      technical rigor, evidence-based decision-making, and regulatory literacy.
+      technical rigor and evidence-based decision-making.
     </p>
     <p>
-      On the security side, I've worked across SOC 2 audits, ISO 27001 implementations, GRC program
-      development, and security operations. I hold CISSP, CISM, and CISA (the three most recognized
-      credentials in the field), alongside ISO 27001 Provisional Implementer certification. My
-      analytics background means I approach risk quantitatively: risk registers are supported by data,
+      I've worked across SOC 2 audits, ISO 27001 implementations, GRC program development, and
+      security operations. I hold CISSP, CISM, and CISA (the three most recognized credentials
+      in the field), alongside ISO 27001 Provisional Implementer certification. My analytics
+      background means I approach risk quantitatively: risk registers are supported by data,
       not just judgment calls.
-    </p>
-    <p>
-      I am also a law school graduate actively preparing for the Philippine Bar Examination. For clients,
-      this means I read contracts, privacy regulations, and audit standards the way a lawyer does, and
-      I translate that reading into security controls and compliance postures that hold up to scrutiny.
     </p>
   </div>
 
@@ -191,10 +186,6 @@ permalink: /about/
       <li>
         <strong>Data Analytics</strong>
         <span>Applied analytics to operational and security data. Developed frameworks for evidence-based risk assessment and compliance metrics reporting.</span>
-      </li>
-      <li>
-        <strong>Law School Graduate</strong>
-        <span>Juris Doctor. Bar exam preparation ongoing. Focus on data privacy law, regulatory compliance, and the legal dimensions of information security governance.</span>
       </li>
     </ul>
   </div>
