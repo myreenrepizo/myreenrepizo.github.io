@@ -48,6 +48,9 @@ tags: [iso-27001, iso-27002, policy, isms, grc]
 | 20 | **Vulnerability Disclosure Policy** | Topic-Specific | 27002: 8.8 | 8.8 Management of technical vulnerabilities: public point of contact for external vulnerability reports, triage process, responsible disclosure timelines, and coordination with reporters |
 | 21 | **Data Masking Policy** | Topic-Specific | 27002: 8.11 | 8.11 Data masking · 5.34 Privacy and protection of PII · 5.12 Classification of information (identifying data requiring masking) · 5.15 Access control (who can view unmasked data) |
 | 22 | **Logging Policy** | Topic-Specific | 27002: 8.15 | 8.15 Logging (log types, retention periods, protection of logs) · 8.16 Monitoring activities · 8.17 Clock synchronization · 5.25 Assessment of information security events (log-based detection) |
+| 23 | **Climate and Environmental Risk Policy** ¹ | Topic-Specific | 27001: Cl. 4.1, 4.2 (Amd.1:2024); 27002: 7.5 | 7.5 Protecting against physical and environmental threats (climate-driven risks: extreme weather, flooding, heat) · climate disruption scenarios as incident triggers (aligns with 5.24, 5.25) · off-site/cloud backup requirements driven by climate risk to primary site (aligns with 8.13) |
+
+¹ Not explicitly required by the standard; may be created if the organization's risk assessment identifies significant or systemic climate-related threats.
 
 ---
 
@@ -60,8 +63,6 @@ Amendment 1 does not mandate a standalone climate change policy. However, if the
 | **Physical and Environmental Security Policy** | Risks from extreme weather events, flooding, heat, or other climate-driven threats to facilities and equipment (aligns with 7.5 -- Protecting against physical and environmental threats) |
 | **Information Security Incident Management Policy** | Climate-driven disruption scenarios (e.g., natural disasters) as incident triggers; continuity procedures for climate events |
 | **Backup Policy** | Off-site/cloud backup requirements driven by climate-risk to primary site |
-
-> If the organization's risk assessment identifies significant or systemic climate-related threats, a dedicated **Climate and Environmental Risk Policy** may be created as an additional topic-specific policy, though it is not explicitly required by the standard.
 
 ---
 
