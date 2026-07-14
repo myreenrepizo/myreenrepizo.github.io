@@ -1,7 +1,7 @@
 ---
 layout: default
-title: "About | Myreen Repizo: Information Security Consultant"
-description: "About Myreen Repizo: CISSP, CISM, CISA certified information security consultant and data analytics professional based in the Philippines."
+title: "About | Myreen Repizo: Information Security Consultant, JD"
+description: "About Myreen Repizo: CISSP, CISM, CISA certified information security consultant with a J.D. and a data analytics background, based in the Philippines."
 permalink: /about/
 ---
 
@@ -149,7 +149,7 @@ permalink: /about/
     <h1>Security depth.<br>Analytical rigor.<br>Practical outcomes.</h1>
     <p>
       I'm Myreen Repizo, an information security consultant with certifications in CISSP, CISM, CISA,
-      and ISO 27001, and a background in data analytics. I work with organizations that
+      and ISO 27001, a J.D., and a background in data analytics. I work with organizations that
       operate in regulated industries and need compliance programs that are both technically sound and
       built to withstand scrutiny.
     </p>
@@ -158,10 +158,12 @@ permalink: /about/
   <div class="about-section">
     <h2>Background</h2>
     <p>
-      My career has moved deliberately across two disciplines that rarely converge in one person:
-      information security and data analytics. That combination is not accidental; it reflects
+      My career has moved deliberately across three disciplines that rarely converge in one person:
+      information security, law, and data analytics. That combination is not accidental; it reflects
       a belief that the strongest compliance and risk programs are built at the intersection of
-      technical rigor and evidence-based decision-making.
+      legal literacy, technical rigor, and evidence-based decision-making. A J.D. means I don't just
+      map controls to frameworks; I read the underlying regulatory and contractual language the way
+      a lawyer does, which shapes how I scope risk and design defensible programs.
     </p>
     <p>
       I've worked across SOC 2 audits, ISO 27001 implementations, GRC program development, and
@@ -226,11 +228,32 @@ permalink: /about/
   </div>
 
   <div class="about-section">
+    <h2>Education</h2>
+    <table class="cert-table">
+      <thead>
+        <tr>
+          <th>Degree</th>
+          <th>Institution</th>
+          <th>Year</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Juris Doctor (J.D.)</td>
+          <td>University of the Philippines Diliman</td>
+          <td><span class="cert-badge">2026</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="about-section">
     <h2>Areas of focus</h2>
     <p>
       SOC 2 · ISO 27001 · NIST Cybersecurity Framework · PCI-DSS · HIPAA · SOX ITGC ·
       Data Privacy Act of the Philippines · GDPR alignment · FAIR risk quantification ·
-      Third-party risk management · Compliance automation · Security policy development
+      Third-party risk management · Compliance automation · Security policy development ·
+      Regulatory and contract analysis
     </p>
   </div>
 
