@@ -29,8 +29,8 @@ GRC automation platform:
 - Mapping existing policies and evidence to ISO 27001:2022 Annex A controls inside the new platform
 - Building integrations that pull evidence directly from source systems instead of manual uploads
 - Redesigning documentation workflows so control evidence stays current without a manual quarterly push
-- Automating recurring compliance tasks — access reviews, policy attestations, and control
-  monitoring — that were previously manual, calendar-driven processes
+- Automating recurring compliance tasks (access reviews, policy attestations, and control
+  monitoring) that were previously manual, calendar-driven processes
 
 ## Why it matters
 

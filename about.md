@@ -148,7 +148,7 @@ permalink: /about/
     <p class="about-eyebrow">About</p>
     <h1>Security depth.<br>Analytical rigor.<br>Built, not just audited.</h1>
     <p>
-      I'm Myreen Repizo. I build compliance programs — CISSP, CISM, CISA, and ISO 27001 certified,
+      I'm Myreen Repizo. I build compliance programs. CISSP, CISM, CISA, and ISO 27001 certified,
       with a J.D. and a background in data analytics. I work with organizations that operate in
       regulated industries, and I'd rather implement the fix than just hand over a list of findings:
       integrations, automation, and documentation included.
