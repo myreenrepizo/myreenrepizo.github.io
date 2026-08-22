@@ -146,12 +146,12 @@ permalink: /about/
 
   <div class="about-hero">
     <p class="about-eyebrow">About</p>
-    <h1>Security depth.<br>Analytical rigor.<br>Practical outcomes.</h1>
+    <h1>Security depth.<br>Analytical rigor.<br>Built, not just audited.</h1>
     <p>
-      I'm Myreen Repizo, an information security consultant with certifications in CISSP, CISM, CISA,
-      and ISO 27001, a J.D., and a background in data analytics. I work with organizations that
-      operate in regulated industries and need compliance programs that are both technically sound and
-      built to withstand scrutiny.
+      I'm Myreen Repizo. I build compliance programs — CISSP, CISM, CISA, and ISO 27001 certified,
+      with a J.D. and a background in data analytics. I work with organizations that operate in
+      regulated industries, and I'd rather implement the fix than just hand over a list of findings:
+      integrations, automation, and documentation included.
     </p>
   </div>
 
