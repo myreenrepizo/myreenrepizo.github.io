@@ -250,8 +250,8 @@ permalink: /about/
   <div class="about-section">
     <h2>Areas of focus</h2>
     <p>
-      SOC 2 · ISO 27001 · NIST Cybersecurity Framework · PCI-DSS · HIPAA · SOX ITGC ·
-      Data Privacy Act of the Philippines · GDPR alignment · FAIR risk quantification ·
+      SOC 2 · ISO 27001 · NIST Cybersecurity Framework · PCI-DSS ·
+      Data Privacy Act of the Philippines · GDPR alignment ·
       Third-party risk management · Compliance automation · Security policy development ·
       Regulatory and contract analysis
     </p>
